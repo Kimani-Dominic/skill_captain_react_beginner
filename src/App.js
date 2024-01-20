@@ -5,6 +5,7 @@ import './App.css'
 import Clock from './clock';
 import Greeting from './greetings'
 import EventHandler from './EventHandler';
+import Login from './Login';
 
 
 function App() {
@@ -45,6 +46,7 @@ const [showMessage, setshowMessage] =useState(false);
       <Clock />
       <Greeting name="Kimani" message="Today I've learnt on creating functional components and passing data through props" />
       <EventHandler />
+      <Login />
 
 
 
