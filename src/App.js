@@ -6,7 +6,8 @@ import Clock from './clock';
 import Greeting from './greetings'
 import EventHandler from './EventHandler';
 import Login from './Login';
-
+import styles from './button.module.css'
+import styled from 'styled-components';
 
 function App() {
   //state Variables
@@ -23,6 +24,12 @@ useEffect(() => {
 }, []);
 //
 const [showMessage, setshowMessage] =useState(false);
+
+const StyledComponent = styled.div`
+  background-color: pink;
+  padding: 15px;
+  border-radius: 10px;
+`;
 
 
   
@@ -47,6 +54,11 @@ const [showMessage, setshowMessage] =useState(false);
       <Greeting name="Kimani" message="Today I've learnt on creating functional components and passing data through props" />
       <EventHandler />
       <Login />
+
+      <button className={styles.button}>Styled with CSS Module</button>
+
+      <StyledComponent>Learned on styled components on day 8 of learning with skill captain</StyledComponent>
+
 
 
 
