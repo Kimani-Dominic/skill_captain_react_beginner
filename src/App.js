@@ -8,6 +8,10 @@ import EventHandler from './EventHandler';
 import Login from './Login';
 import styles from './button.module.css'
 import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
 
 function App() {
   //state Variables
@@ -35,7 +39,23 @@ const StyledComponent = styled.div`
   
   return (
     <div>
-      <h1>Welcome to day 3 & 4 of react learning with Skill-captain</h1>
+      <Router>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/home">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+    <Routes>
+      <Route path="/home" exact element={<Home/>} />
+      <Route path="/about" element={<About/>} />
+    </Routes>
+  </Router>
+      <h1>Welcome to day 9 of react learning with Skill-captain</h1>
       <h2>Count: {count}</h2>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>
   Increment
